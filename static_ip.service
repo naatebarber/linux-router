@@ -1,0 +1,10 @@
+[Unit]
+Description=Set static IP at boot
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/static_ip.sh
+
+[Install]
+WantedBy=multi-user.target
